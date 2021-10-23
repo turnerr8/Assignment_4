@@ -1,0 +1,83 @@
+:root{
+    --lb-red: #D40000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+#title {
+    grid-row: 0/1;
+    grid-column: 2/3;
+    height: 6em;
+    margin: 2em auto;
+}
+
+#description {
+    position: static;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    border: 3px solid black;
+    border-radius: 2em;
+    padding: 2em;
+    z-index: 5;
+    background-color: whitesmoke;
+    font-size: 1.5em;
+    
+}
+
+#description-button {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin: 2em auto;
+    color: var(--lb-red);
+    padding: .5em;
+    border-radius: .5em;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#description-button:hover {
+    background-color: var(--lb-red);
+    color: white;
+    cursor: pointer;
+}
+
+#img-left {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url('./img/happy2.jpeg');
+    background-position:center;
+    background-size: cover;
+}
+
+#img-right {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    background-image: url('./img/happy1.jpeg');
+    background-position: -5em;;
+    background-size: cover;
+}
+
+#quote {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 10em 3em;
+}
+
+.q-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+    cursor: pointer;
+}
